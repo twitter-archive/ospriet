@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Ospriet by twitter</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Ospriet</h1>
+        <p>An audience moderation app built on Twitter</p>
+        <p class="view"><a href="https://github.com/twitter/ospriet">View the Project on GitHub <small>twitter/ospriet</small></a></p>
+        <ul>
+          <li><a href="https://github.com/twitter/ospriet/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/twitter/ospriet/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/twitter/ospriet">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>An audience moderation app built on Twitter</h1>
+
+<p><a href="http://twitter.github.com/ospriet">Ospriet</a> is a moderation tool that allows for audiences to post and vote on questions/comments for talks, presentations, and events. The application is written in <a href="http://nodejs.org/">node.js</a>, uses <a href="http://www.mongodb.org/">MongoDB</a> for database storage, and is designed for deployment on <a href="http://nodejitsu.com/">nodejitsu</a>.</p>
+
+<h2>Overview</h2>
+
+<p>Ospriet allows anyone with a Twitter account to submit a question or comment, by posting an @-reply to a Twitter account dedicated for an audience-oriented event. The submission will be reposted to the event's account, with attribution. Audience members can vote up the best submissions by favoriting the submissions on the event account. Ospriet will then keep track of all of the favorites and provide the top submissions. Ospriet provides one single, simple interface for all of this that audience members can use on most devices.</p>
+
+<p>As an example, let's take the event account of <a href="https://twitter.com/dftg">@dftg</a> and submit a question.</p>
+
+<pre><code>@dftg: What are your thoughts on Apple’s approach to design?
+</code></pre>
+
+<p>This tweet will be reposted by the application to <a href="https://twitter.com/dftg">@dftg</a> as an @-reply to your submission, and look like this:</p>
+
+<pre><code>From @couch: What are your thoughts on Apple's approach to design?
+</code></pre>
+
+<p>Anyone can then favorite that reposted tweet, and see the top favorited submissions on the site.</p>
+
+<p>You can view an example of the site powered by the application—used at a 2012 SXSW panel—at <a href="http://designfromthegut.com">http://designfromthegut.com</a>.</p>
+
+<p>For more information on the origins of the application, read <a href="http://couch.tumblr.com/post/18854314402">this post</a>. The name 'Ospriet' comes from the Anglo-French term for the Osprey, a "sea hawk" known for hunting for fish in the sea.</p>
+
+<h2>Setup</h2>
+
+<p>Please refer to these wiki pages to download, customize, and deploy your own instance of Ospriet.</p>
+
+<ul>
+<li><a href="https://github.com/twitter/ospriet/wiki/Creating-your-development-environment">Creating your development environment</a></li>
+<li><a href="https://github.com/twitter/ospriet/wiki/Creating-a-Twitter-app">Creating a Twitter app</a></li>
+<li><a href="https://github.com/twitter/ospriet/wiki/Customizing-Ospriet">Customizing Ospriet</a></li>
+<li><a href="https://github.com/twitter/ospriet/wiki/Testing-Ospriet">Testing Opsriet</a></li>
+<li><a href="https://github.com/twitter/ospriet/wiki/Working-with-nodejitsu">Working with nodejitsu</a></li>
+</ul><h2>Libraries</h2>
+
+<p><strong>Server-side</strong></p>
+
+<ul>
+<li>
+<a href="http://obvious.github.com/matador">Matador</a> <em>for MVC app structure</em>
+</li>
+<li>
+<a href="http://github.com/avianflu/ntwitter">ntwitter</a> <em>node.js wrapper for Twitter API</em>
+</li>
+<li>
+<a href="http://mongoosejs.com/">mongoose</a> <em>node.js wrapper for MongoDB</em>
+</li>
+<li>
+<a href="http://socket.io">socket.io</a> <em>for real-time updating of client-side UI</em>
+</li>
+</ul><p><strong>Client-side</strong></p>
+
+<ul>
+<li>
+<a href="http://twitter.github.com/bootstrap">Bootstrap</a> <em>for skeletal layout and micro-jQuery plugins</em>
+</li>
+<li>
+<a href="http://documentcloud.github.com/underscore">underscore.js</a> <em>for client-side data manipulation</em>
+</li>
+<li>
+<a href="http://twitter.github.com/hogan.js">hogan.js</a> <em>for template rendering</em>
+</li>
+<li>
+<a href="https://dev.twitter.com/docs/intents">Twitter Web Intents</a> <em>for tweet actions without authentication</em>
+</li>
+</ul>
+
+<h2>Screenshots</h2>
+
+<p><strong>Main index view</strong></p>
+<img src="http://twitter.github.com/ospriet/images/index.jpg" title="Ospriet primary view" alt="Ospriet primary view" width="500" style="display: block;" />
+
+<p><strong>Presentation view for projector/screens</strong></p>
+<img src="http://twitter.github.com/ospriet/images/display.jpg" title="Ospriet presentation view" alt="Ospriet presentation view" width="500" style="display: block;" />
+
+<p><strong>Responsive layout for mobile</strong></p>
+<img src="http://twitter.github.com/ospriet/images/iphone.jpg" title="Ospriet mobile view" alt="Ospriet mobile view" width="300" style="display: block;" />
+
+<h2>Issues</h2>
+
+<p>Have a bug? Create an issue here on GitHub!</p>
+
+<p><a href="https://github.com/twitter/ospriet/issues">https://github.com/twitter/ospriet/issues</a></p>
+
+<h2>Versioning</h2>
+
+<p>For transparency and insight, releases will be numbered with the follow format:</p>
+
+<pre><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;
+</code></pre>
+
+<p>And constructed with the following guidelines:</p>
+
+<ul>
+<li>Breaking backwards compatibility bumps the major</li>
+<li>New additions without breaking backwards compatibility bumps the minor</li>
+<li>Bug fixes and misc changes bump the patch</li>
+</ul><p>For more information on semantic versioning, please visit <a href="http://semver.org/">http://semver.org/</a>.</p>
+
+<h2>Authors</h2>
+
+<p><strong>Bill Couch</strong></p>
+
+<ul>
+<li><a href="https://github.com/couch">https://github.com/couch</a></li>
+<li><a href="https://twitter.com/couch">https://twitter.com/couch</a></li>
+</ul><p><strong>Dustin Senos</strong></p>
+
+<ul>
+<li><a href="https://github.com/dustinsenos">https://github.com/dustinsenos</a></li>
+<li><a href="https://twitter.com/dustin">https://twitter.com/dustin</a></li>
+</ul><h2>License</h2>
+
+<p>Copyright 2012 Twitter, Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0: <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/twitter">twitter</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-362648-15");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
