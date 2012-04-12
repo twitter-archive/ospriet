@@ -1,0 +1,704 @@
+/*
+ *  Copyright 2012 Twitter, Inc.
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-family: "Helvetica", sans-serif;
+}
+
+body.index {
+  background-color: rgb(250, 250, 250);  
+  color: rgb(71, 71, 71);
+}
+
+.patterned {
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
+.index.patterned,
+.index .patterned {
+  background-image: url('../img/linen_light.png');
+}
+
+.index h1 {
+  text-shadow: 0px 1px 0px rgba(255,255,255,1);
+}
+
+.index h1 a {
+  color: #666;
+}
+
+.index p {
+  color: rgb(150,150,150);
+  text-shadow: 0px 1px 0px rgba(255,255,255,1);
+}
+
+
+h1 {
+  margin: 0 0 10px 0;
+  font-weight: 100;
+}
+
+h1 a {
+  font-size: 30px;
+  color: #666;
+}
+
+h1 a.help {
+  padding-left: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: help;
+}
+
+p {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p a {
+  color: #3a87ad;
+  font-weight: bold;
+}
+
+p a span.deemphasize {
+  font-weight: 300;
+}
+
+p a:hover {
+  color: #307191;
+  text-decoration: none;
+}
+
+
+/* bootstrap overrride */
+
+.btn-custom {
+  display: inline-block;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 18px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+  vertical-align: middle;
+  
+  background-color: #3a87ad;
+  color: #fff;
+  text-shadow: none;
+  
+  font-weight: 100;
+  
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  
+  -webkit-box-shadow: inset 0px -1px 0px rgba(255,255,255,.75);
+  -moz-box-shadow: inset 0px -1px 0px rgba(255,255,255,.75);
+  box-shadow: inset 0px -1px 0px rgba(255,255,255,.75);
+  
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  *margin-left: .3em;
+  
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+}
+.btn-custom:hover {
+  text-decoration: none;
+  color: #FFF;
+  background-color: #307191;
+}
+
+/* end override */
+
+
+ul.participants {
+  margin: 0;
+  padding: 10px 10px 10px 20px;
+  background-color: rgba(0,0,0,.05);
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,.15);
+  -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,.15);
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,.15);
+  
+}
+
+ul.participants li {
+  display: inline-block;
+  margin: 0px 10px;
+  list-style: none;
+  text-align: center;
+}
+
+ul.participants li img {
+  width: 75px;
+  height: 75px;
+  
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  
+  -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,.5);
+  -moz-box-shadow: 0px 1px 1px rgba(0,0,0,.5);
+  box-shadow: 0px 1px 1px rgba(0,0,0,.5);
+    
+ /* filter: url(filters.svg#grayscale); *//* Firefox 3.5+ */
+  filter: gray; /* IE5+ */
+  -webkit-filter: grayscale(.65); /* Webkit Nightlies & Chrome Canary */
+  
+  -webkit-transition: .5s ease-out;
+  -moz-transition: .5s ease-out;
+  transition: .5s ease-out;
+}
+
+ul.participants li:hover img {
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+
+ul.participants li a,
+ul.participants li a:hover,
+ul.participants li a:visited {
+  color: rgb(150,150,150);
+  text-decoration: none;
+}
+
+ul.participants li h3 {
+  line-height: 14px;
+  font-size: 12px;
+}
+
+ul.participants li p {
+  font-family: "Helvetica", sans-serif;
+  font-size: 10px;
+  font-weight: 100;
+  line-height: 20px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.contents {
+  margin-top: 20px;
+}
+
+.tweets-section {
+  padding: 20px;
+  margin-bottom: 20px;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  
+  border: 1px solid rgba(0,0,0,.1);
+  
+  background-color: rgba(255,255,255,.25);
+  
+  -webkit-transition: height 1s;
+  -moz-transition: height 1s;
+  transition: height 1s;
+}
+
+.tweets-section.tweets-top {
+  border: 1px solid rgba(248, 148, 6, .25);
+}
+
+.tweets-section.tweets-current {
+  display: none;
+}
+
+.tweets-section .header {
+  margin-bottom: 20px;
+}
+
+.tweets-section .header h3,
+.tweets-section .header a {
+  display: inline-block;
+}
+
+.tweets-section .header h3 {
+  font-size: 16px;
+  font-weight: 100;
+  text-transform: uppercase;  
+}
+
+.tweets-section .header h3 span.subheader-icon {
+  padding: 0px 15px 0px 5px;
+}
+
+.tweets-section .header h3 span.finger {
+  color: rgba(150, 25, 6, 1);
+}
+
+.tweets-section .header h3 span.star {
+  color: rgba(248, 148, 6, 1);
+}
+
+.tweets-section .header .timer {
+  float: right;
+  opacity: 0;
+}
+
+.tweets-section .header .timer canvas {
+  clear: none;
+  float: right;
+}
+
+.tweets-section .header .timer p {
+  display: inline;
+  text-align: right;
+  font-size: 10px;
+  text-transform: uppercase;
+  float: right;
+  line-height: 30px;
+  padding-right: 10px;
+  color: #307191;
+}
+
+.tweets-section p.empty {
+  padding: 40px;
+  text-align: center;  
+}
+
+.tweets-section .tweets {
+  width: 100%;
+  margin-left: 0px;
+  overflow: hidden;
+}
+
+.tweets-section .tweets > li {
+  margin: 0;
+  padding: 15px 0px 15px;
+  list-style: none;
+  border-bottom: 1px solid #EEE;
+  
+  overflow: none;
+  min-height: 50px;
+  opacity: 1;
+  height: auto;
+  
+  background-color: rgba(255,255,255,0);
+  -webkit-transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  transition: background-color .5s;
+}
+.tweets-section .tweets > li:hover {
+  background-color: rgba(255,255,255,.25);
+}
+
+.tweets-section .tweets > li p {
+  margin-bottom: 0;
+  -webkit-transition: color .5s;
+  -moz-transition: color .5s;
+  transition: color .5s;
+}
+.tweets-section .tweets > li:hover p {
+  color: #666;
+}
+
+
+.tweets-section .tweets li.offset {
+  -webkit-transition: margin-top 1s;
+  -moz-transition: margin-top 1s;
+  transition: margin-top 1s;
+}
+
+
+
+.tweets-section .tweets li:last-child {
+  border: none;
+}
+
+.tweets-section .tweets li .tweet-block {
+}
+
+.tweets-section .tweets li .tweet-stats {
+  float: left;
+  display: inline-block;
+  padding-right: 23px;
+  width: 20px;
+  height: 30px;
+}
+
+.tweets-section .tweets li .tweet-stats span {
+  float: left;
+  padding: 3px 2px 2px 3px;
+  width: 20px;
+  height: 20px;
+  
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;  
+  
+  border-radius: 50px;
+  border: 1px solid #CCC; 
+  
+  border: 1px solid rgba(248, 148, 6, 1);
+  color: rgba(248, 148, 6, 1);
+    
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+}
+
+.tweets-section .tweets li:hover .tweet-stats span {
+}
+
+
+.tweets-section .tweets li .tweet-content {
+  padding-top: 0px;
+  margin-bottom: 12px;
+}
+
+.tweets-section .tweets li .tweet-content p {
+  display: block;
+}
+
+.tweets-section .tweets li .tweet-content a {
+  text-decoration: none;
+}
+
+.tweets-section .tweets li .tweet-content a.tweet-url.hashtag {
+  font-weight: normal;
+  opacity: .75;
+}
+
+.tweets-section .tweets li .tweet-metadata {
+  margin-left: 40px;
+  overflow: hidden;
+}
+
+.tweets-section .tweets li .tweet-metadata .tweet-favorites {
+   display: inline-block;
+   margin-left: 0px;
+}
+.tweets-section .tweets li .tweet-metadata .tweet-favorites ul.users {
+  margin-left: 0;
+  padding-left: 2px;
+}
+.tweets-section .tweets li .tweet-metadata .tweet-favorites ul.users li {
+  display: inline-block;
+  margin: 0px 3px 3px 0px;
+}
+.tweets-section .tweets li .tweet-metadata .tweet-favorites ul.users li a img {
+  height: 20px;
+  width: 20px;
+  
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  /*filter: url(filters.svg#grayscale);*/ /* Firefox 3.5+ */
+  filter: gray; /* IE5+ */
+  -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+
+  -webkit-transition: .5s ease-out;
+  -moz-transition: .5s ease-out;
+  transition: .5s ease-out;
+}
+.tweets-section .tweets li:hover .tweet-metadata .tweet-favorites ul.users li a img {
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+
+
+.tweets-section .tweets li .tweet-metadata {}
+.tweets-section .tweets li .tweet-metadata .tweet-actions .actions {
+  list-style: none;
+}
+.tweets-section .tweets li .tweet-metadata .tweet-actions .actions .action-link {
+  display: inline-block;
+  color: #CCC;
+}
+
+.tweets-section .tweets li .tweet-metadata .tweet-actions .actions .action-link a {
+  font-size: 10px;
+  text-transform: uppercase;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+}
+
+.tweets-section .tweets li .tweet-metadata .tweet-actions .actions .action-link a.action-permalink {
+  text-transform: none;
+  color: #CCC;
+}
+.tweets-section .tweets li .tweet-metadata .tweet-actions .actions .action-link a.action-permalink:hover {
+  color: #666;
+}
+
+.tweets-section .tweets li:hover .tweet-metadata .tweet-actions .actions .action-link a.action-favorite {
+ color: rgba(248, 148, 6, 1);
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.footer p {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
+
+  
+  .row > .span6.left {
+    float: right;
+  }
+  
+  .row > .span6.right {
+    float: left;
+  }
+  
+/* presenter's display styles */
+
+body.presentation {
+  background-color: rgb(0, 0, 0);  
+  color: rgb(100, 100, 100);  
+}
+
+.presentation.patterned,
+.presentation .patterned {
+  background-image: url('../img/linen_dark.png');
+}
+
+.presentation .inset,
+.presentation .tweets-section {
+  
+  text-shadow: 0px 2px 1px rgba(0,0,0,1);
+  
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  
+  -webkit-box-shadow: 0px -1px 1px rgba(0,0,0,1);
+     -moz-box-shadow: 0px -1px 1px rgba(0,0,0,1);
+          box-shadow: 0px -1px 1px rgba(0,0,0,1);
+}
+
+.presentation .inset {
+  background-color: rgba(0,0,0,.25);
+
+}
+
+.presentation .tweets-section {
+  background-color: #111;
+}
+
+
+.display-content .top-question,
+.display-content .sidebar { position: fixed;}
+
+.display-content .top-question {
+  margin-top: -40px;
+  padding-top: 40px;
+  
+  z-index: 10;
+  
+  background-color: rgb(250, 250, 250);  
+}
+
+.display-content ol {
+  padding: 15px 0px 20px 20px;
+  margin-left: 0px;
+}
+
+.display-content ol li {
+  list-style-position: inside;
+}
+
+.display-content p {
+ font-size: 20px;
+ line-height: 30px;
+}
+
+.display-content a {
+  color: #5E92A8;
+}
+
+.tweets-section .header h3 span.finger {
+  color: rgba(200, 25, 0, 1);
+}
+
+.display-content .desc h1 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px; 
+  margin-top: 5px;
+  width: 100%;
+  
+  text-align: center;
+  text-shadow: none;
+}
+
+.display-content .desc h1 a {
+  width: 100%;
+  padding: 10px 20px;
+  color: #999;
+}
+
+.display-content h1 a span {
+  padding: 0px 5px;
+}
+
+.display-content .desc p {margin-top: 20px; color: #333;}
+
+.display-content .desc p,
+.display-content .desc p a,
+.display-content ol li {font-size: 20px; line-height: 35px;}
+
+
+.display-content .content {  
+  -webkit-border-radius: 5px 5px 0px 0px;
+     -moz-border-radius: 5px 5px 0px 0px;
+         -border-radius: 5px 5px 0px 0px;
+}
+
+.display-content .tweets-section.tweets-current {
+  margin-bottom: 35px;
+    
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -border-radius: 5px 5px 0px 0px;
+}
+
+.display-content .tweets-section.tweets-top {
+  border: none;
+}
+
+
+.display-content .tweets-section.tweets-top .header {
+  background-color: #111;
+  
+  background: -moz-linear-gradient(top,  rgba(17,17,17,1) 0%, rgba(17,17,17,1) 75%, rgba(17,17,17,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(17,17,17,1)), color-stop(75%,rgba(17,17,17,1)), color-stop(100%,rgba(17,17,17,0)));
+  background: -webkit-linear-gradient(top,  rgba(17,17,17,1) 0%,rgba(17,17,17,1) 75%,rgba(17,17,17,0) 100%);
+  background: -o-linear-gradient(top,  rgba(17,17,17,1) 0%,rgba(17,17,17,1) 75%,rgba(17,17,17,0) 100%);
+  background: -ms-linear-gradient(top,  rgba(17,17,17,1) 0%,rgba(17,17,17,1) 75%,rgba(17,17,17,0) 100%);
+  background: linear-gradient(top,  rgba(17,17,17,1) 0%,rgba(17,17,17,1) 75%,rgba(17,17,17,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#111111', endColorstr='#00111111',GradientType=0 );
+  
+
+  position: fixed;
+  z-index: 10;
+  width: 512px;
+  
+  padding: 20px 22px 15px;
+  margin: -21px -15px;
+  margin-left: -20px;
+  padding-right: 6px;
+  
+/*  border-top: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+*/  
+/*  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -border-radius: 5px 5px 0px 0px;
+*/  
+
+}
+
+
+
+.display-content .tweets-section.tweets-top .tweets {
+  margin-top: 35px;
+}
+
+
+.display-content .tweets-section h3 {
+  color: #999;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.display-content .tweets-section .tweets > li {
+  min-height: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  border-bottom: 1px solid #222;
+}
+
+.display-content .tweets-section .tweets > li:last-child {
+  border-bottom: none;
+}
+
+.display-content .tweets-section .tweets > li:hover {
+  background-color: transparent;
+}
+
+.display-content .tweets-section .tweets > li p {
+  color: #FFF;
+}
+
+.display-content .tweets-section.tweets-current .tweets li p {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.display-content .tweets-section .tweets li .tweet-stats {
+  margin-bottom: 60px;
+}
+
+.display-content .tweets-current .tweets li .tweet-stats {
+  margin-top: 5px;
+}
+
+.display-content .tweets-section .tweets li .tweet-stats span {
+  font-size: 20px;
+  padding: 5px 6px 5px 5px;
+}
+
+.display-content .tweets-section .tweets li .tweet-metadata .tweet-favorites ul.users li a img {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+
+.display-content .tweets-section .tweets li .tweet-metadata .tweet-actions .actions .action-link a {
+  font-size: 20px;
+  color: #999;
+}
+
+
+/* comment out to show favorites per section on the display page */
+.display-content .tweets-section.tweets-current .tweets li .tweet-metadata .tweet-favorites,
+.display-content .tweets-section.tweets-top .tweets li .tweet-metadata .tweet-favorites,
+
+.display-content .tweets-section .tweets li .tweet-metadata .tweet-actions .actions .action-link .bullet,
+.display-content .tweets-section .tweets li .tweet-metadata .tweet-actions .actions .action-favorite {
+  display: none;
+}

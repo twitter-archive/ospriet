@@ -1,0 +1,32 @@
+{
+  "name": "ospriet",
+  "engines": {
+    "node": "0.6.x"
+  },
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "mongodb": "0.9.6-23",
+    "mongoose": "2.5.6",
+    "ntwitter": "0.2.10",
+    "socket.io": "0.8.7",
+    "express": ">=2.5.0 <3.0.0",
+    "valentine": "*",
+    "klass": "*",
+    "colors": "*",
+    "hogan.js": "*",
+    "matador": "<=0.0.14"
+  },
+  "domains": [
+    "designfromthegut.com"
+  ],
+  "subdomain": "fromthegut",
+  "scripts": {
+    "start": "server.js"
+  },
+  "licenses": [
+    { "type": "Apache-2.0"
+      , "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ]
+}

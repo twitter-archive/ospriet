@@ -1,0 +1,33 @@
+<div class="container">
+  
+  <div class="row">
+    <div class="span6 desc">
+      {{#event}}
+        {{>event}}
+      {{/event}}
+    </div>
+    <div class="span6">
+      <ul class="participants">
+        {{#participants}}
+          {{>participants}}
+        {{/participants}}
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row contents">
+    <div class="span6 left">
+      {{> tweets_current}}
+      {{> tweets_top}}
+    </div>
+    <div class="span6 right">
+      {{> tweets_feed}}
+    </div>
+  </div>
+  
+  <div class="row footer">
+    <div class="span8 offset2">
+      <p>Powered by <a href="http://github.com/twitter/ospriet">Ospriet from Twitter</a> on <a href="http://nodejitsu.com/">nodejitsu</a>.</p>
+    </div>
+  </div>
+</div>

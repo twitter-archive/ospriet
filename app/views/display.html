@@ -1,0 +1,29 @@
+<div class="container display-content">
+  
+  <div class="row top-question patterned">
+    <div class="span12">
+      {{> tweets_current}}      
+    </div>
+  </div>
+  
+  <div class="row additional-content patterned">
+    <div class="span5 sidebar">
+      <div class="desc">
+        {{#site}}
+        <h1 class="inset"><a href="{{{raw_url}}}">{{{display_url}}}</a></h1>
+        {{/site}}
+        <ol class="inset">
+          <li>Question or comment?</li>
+          <li>Post as a reply to <a href="https://twitter.com/{{screen_name}}">@{{screen_name}}</a></li>
+          <li>See submissions on <a href="https://twitter.com/{{screen_name}}">@{{screen_name}}</a>'s timeline</li>
+          <li>Favorite the ones you like</li>
+          <li>Top picks will be discussed</li>
+        </ol>
+      </div>
+    </div>
+    
+    <div class="span7 offset5 content">
+      {{> tweets_top}}
+    </div>
+  </div>
+</div>
