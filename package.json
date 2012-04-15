@@ -15,7 +15,8 @@
     "klass": "*",
     "colors": "*",
     "hogan.js": "*",
-    "matador": "<=0.0.14"
+    "matador": "<=0.0.14",
+    "nconf": "0.5.1"
   },
   "domains": [
     "designfromthegut.com"
