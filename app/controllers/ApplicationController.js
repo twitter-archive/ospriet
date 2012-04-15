@@ -16,7 +16,7 @@
 module.exports = require('matador').BaseController.extend(function () {
   this.viewFolder = ''
   this.layout = 'layout'
-  this.config = app.getConfig()
+  this.config = app.config
 })
   .methods({
 

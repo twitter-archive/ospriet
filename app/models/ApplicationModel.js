@@ -17,6 +17,6 @@ module.exports = Class(function () {
   this.mongo = require('mongodb')
   this.mongoose = require('mongoose')
   this.Schema = this.mongoose.Schema
-  this.config = app.getConfig()
-  this.mongoose.connect(this.config.database)
+  this.config = app.config
+  this.mongoose.connect(this.config.get('database'))
 })
