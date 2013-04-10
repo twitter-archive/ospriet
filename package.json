@@ -11,7 +11,7 @@
     "ntwitter": "0.2.10",
     "socket.io": "0.8.7",
     "express": ">=2.5.0 <2.9.9",
-    "valentine": "*",
+    "valentine": "1.5.4",
     "klass": "*",
     "colors": "*",
     "hogan.js": "*",
