@@ -10,7 +10,7 @@
     "mongoose": "2.5.6",
     "ntwitter": "0.2.10",
     "socket.io": "0.8.7",
-    "express": ">=2.5.0 <3.0.0",
+    "express": ">=2.5.0 <2.9.9",
     "valentine": "*",
     "klass": "*",
     "colors": "*",
