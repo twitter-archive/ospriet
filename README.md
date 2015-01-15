@@ -49,7 +49,7 @@ Please refer to these wiki pages to download, customize, and deploy your own ins
 
 **Client-side**
 
-- [Bootstrap](http://twitter.github.com/bootstrap) _for skeletal layout and micro-jQuery plugins_
+- [Bootstrap](http://getbootstrap.com/) _for skeletal layout and micro-jQuery plugins_
 - [underscore.js](http://documentcloud.github.com/underscore) _for client-side data manipulation_
 - [hogan.js](http://twitter.github.com/hogan.js) _for template rendering_
 - [Twitter Web Intents](https://dev.twitter.com/docs/intents) _for tweet actions without authentication_
