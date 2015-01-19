@@ -15,6 +15,7 @@
 
 var matador = require('matador')
 var fs = require('fs')
+var nconf = require('nconf')
 
 app.configure(function () {
   app.set('models', __dirname + '/app/models')
@@ -23,29 +24,18 @@ app.configure(function () {
   app.set('controllers', __dirname + '/app/controllers')
   app.set('services', __dirname + '/app/services')
 
-  // added code
 
-  app.set('config', __dirname + '/app/config')
-  var configStore = {}
-  function fetchConfig() {
-    configStore = require(app.set('config') + '/application')
-    var env = process.env.NODE_ENV
-    if (!env) env = 'production' // default to production
-    var env_config_file = app.set('config') + '/environments/' + env + '.js'
-    try {
-      var stat = fs.statSync(env_config_file)
-      if (!stat.isFile()) return
-      v.extend(configStore, require(env_config_file))
-    } catch (e) {
-      return
-    }
-  }
-  fetchConfig()
+  //
+  // Setup nconf to use (in-order):
+  //   1. Command-line arguments
+  //   2. Environment variables
+  //   3. A file located at 'path/to/config.json'
+  //
+  nconf.argv()
+       .env()
+       .file({ file: 'config.json' });
 
-  app.getConfig = function () {
-    return configStore
-  }
-
+  app.config = nconf;
   var serviceList = ['Stream']
   var serviceStore = []
 
@@ -101,5 +91,5 @@ app.configure('production', function () {
 })
 matador.mount(require('./app/config/routes'))
 
-app.listen(app.getConfig().server_port)
-console.log('matador running on port ' + app.getConfig().server_port)
+app.listen(app.config.get('server_port'))
+console.log('matador running on port ' + app.config.get('server_port'))

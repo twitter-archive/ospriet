@@ -18,30 +18,31 @@ var io      = require('socket.io').listen(app)
     io.set('log level', 1)
 
 module.exports = require(app.set('services') + '/BaseService').extend(function () {
+
   this.twttr = new twitter({
-      consumer_key: this.config.twitter_app.consumer_key
-    , consumer_secret: this.config.twitter_app.consumer_secret
-    , access_token_key: this.config.twitter_app.access_token_key
-    , access_token_secret: this.config.twitter_app.access_token_secret
+      consumer_key: this.config.get('twitter_app:consumer_key')
+    , consumer_secret: this.config.get('twitter_app:consumer_secret')
+    , access_token_key: this.config.get('twitter_app:access_token_key')
+    , access_token_secret: this.config.get('twitter_app:access_token_secret')
   })
   
   this.stream_active = false
   this.account_details = {
-      id_str: this.config.twitter_account.id
-    , screen_name: this.config.twitter_account.screen_name
+      id_str: this.config.get('twitter_account:id')
+    , screen_name: this.config.get('twitter_account:screen_name')
   }
 
   this.moderators = [
     {
-        id_str: this.config.twitter_account.id
-      , screen_name: this.config.twitter_account.screen_name
+        id_str: this.config.get('twitter_account:id')
+      , screen_name: this.config.get('twitter_account:screen_name')
     }
   ]
-  v.each(this.config.moderators, function(moderator) {
+  v.each(this.config.get('moderators'), function(moderator) {
     this.moderators.push(moderator)
   }.bind(this))
   
-  this.blacklist = this.config.blacklist
+  this.blacklist = this.config.get('blacklist')
   
   this.account_statuses = []
   this.model = this.getModel('Favorites')

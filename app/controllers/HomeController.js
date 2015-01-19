@@ -25,10 +25,10 @@ module.exports = require('./ApplicationController').extend(function () {
      index: function () {
         this.render('index', {
             view:            'index'
-          , event:           this.config.event
-          , participants:    this.config.participants
-          , screen_name:     this.config.twitter_account.screen_name
-          , site:            this.config.site
+          , event:           this.config.get('event')
+          , participants:    this.config.get('participants')
+          , screen_name:     this.config.get('twitter_account:screen_name')
+          , site:            this.config.get('site')
           , css: [
               {url: 'lib/bootstrap/bootstrap-responsive.css'}
             , {url: 'css/application-responsive.css'}
@@ -44,9 +44,9 @@ module.exports = require('./ApplicationController').extend(function () {
     , display: function () {
         this.render('display', {
           view:             'presentation'
-        , event:            this.config.event
-        , screen_name:      this.config.twitter_account.screen_name
-        , site:             this.config.site
+        , event:            this.config.get('event')
+        , screen_name:      this.config.get('twitter_account:screen_name')
+        , site:             this.config.get('site')
         });
       }
 

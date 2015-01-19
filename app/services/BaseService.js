@@ -1,5 +1,5 @@
 module.exports = Class(function(){
-  this.config = app.getConfig()
+  this.config = app.config
 })
   .methods ({
     getModel: function (name) {
